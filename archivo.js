@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.toLowerCase();
 
         playlistItems.forEach(function(item) {
-            const itemText = item.textContent.toLowerCase();
-            if (itemText.includes(searchTerm)) {
+            const itemText = item.textContent;
+            const itemTextLowerCase = itemText.toLowerCase();
+            if (itemText.includes(searchTerm) || itemTextLowerCase.includes(searchTerm)) {
                 item.style.display = 'flex';
             } else {
                 item.style.display = 'none';
