@@ -47,9 +47,6 @@ body {
     background-color: #000000a7;
 }
 
-.gostei {
-    display: flex;
-}
 
 a.avaliacao-link {
     color: rgb(56, 56, 60); /* Cor do texto do link */
@@ -350,7 +347,7 @@ a.avaliacao-link {
     .gostei h3 {
         color: #bee3a2;
         width: 94%;
-        font-size: 10px;
+        font-size: 20px;
         margin-left: 10px;
     }
     .anuncio {
