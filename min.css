@@ -496,10 +496,9 @@ body {
         margin-left: 10px;
     }
     
-    .gostei h3 {
+    .gostei {
         color: #ffffff;
         width: 100%;
-        size: 20;
     }
     .anuncio {
         width: 90vw; /* Definindo a largura da div */
@@ -513,7 +512,6 @@ body {
     }
     .h3 {
         size: 20,
-        color: #fff,
         }
 }
 
