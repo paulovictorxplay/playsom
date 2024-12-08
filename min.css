@@ -499,7 +499,7 @@ body {
     .gostei h3 {
         color: #ffffff;
         width: 100%;
-        size: 20px;
+        size: 20;
     }
     .anuncio {
         width: 90vw; /* Definindo a largura da div */
@@ -511,5 +511,8 @@ body {
         box-sizing: border-box; /* Incluindo borda e preenchimento na largura e altura */
         text-align: center;
     }
+    .h3 {
+        size: 13
+        }
 }
 
