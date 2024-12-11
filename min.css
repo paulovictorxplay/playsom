@@ -198,7 +198,7 @@ a.avaliacao-link {
     /* Contêiner responsivo para o vídeo */
 .video-container {
     position: relative;
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100px; /* Ocupa toda a largura disponível */
     padding-top: 56.25%; /* Proporção 16:9 (altura relativa à largura) */
     overflow: hidden;
 }
