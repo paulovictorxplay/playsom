@@ -9,6 +9,25 @@ body {
     background-color: #000000;
     flex-direction: column;
 }
+/* Contêiner responsivo para o vídeo */
+.video-container {
+    position: relative;
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding-top: 56.25%; /* Proporção 16:9 (altura relativa à largura) */
+    overflow: hidden;
+}
+
+/* O iframe ou o vídeo ocupa toda a área do contêiner */
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .navbar {
     display: none;
