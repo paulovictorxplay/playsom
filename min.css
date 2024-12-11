@@ -198,9 +198,8 @@ a.avaliacao-link {
     /* Contêiner responsivo para o vídeo */
 .video-container {
     position: relative;
+    background-color: #ffffff;
     width: 100px; /* Ocupa toda a largura disponível */
-    padding-top: 56.25%; /* Proporção 16:9 (altura relativa à largura) */
-    overflow: hidden;
 }
 
 /* O iframe ou o vídeo ocupa toda a área do contêiner */
@@ -215,9 +214,6 @@ a.avaliacao-link {
 }
     .video-playlist-container {
         flex-direction: column;
-        width: 100%;
-    }
-    .video-container video {
         width: 100%;
     }
     .playlist {
