@@ -407,7 +407,7 @@ body {
 
 .anuncio {
     width: 90vw; /* Definindo a largura da div */
-    height: 10vh; /* Definindo a altura da div */
+    height: 15vh; /* Definindo a altura da div */
     background-color: #ff0000; /* Cor de fundo */
     border: 1px solid #ccc; /* Borda */
     margin: 20px 0; /* Margem externa */
