@@ -222,12 +222,6 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
-    .gostei h3 {
-        color: #ffffff;
-        width: 94%;
-        font-size: 10px;
-        margin-left: 10px;
-    }
     .anuncio {
     width: 90vw; /* Definindo a largura da div */
     height: 10vh; /* Definindo a altura da div */
@@ -279,7 +273,7 @@ a.avaliacao-link {
         margin-left: 10px;
     }
     .h3 {
-        size: 2;
+        font-size: 8px;
     }
     .anuncio {
     width: 90vw; /* Definindo a largura da div */
