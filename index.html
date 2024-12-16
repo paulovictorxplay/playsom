@@ -17,8 +17,12 @@
 
             
             <div class="gostei">
-                <div>
-                    <h3 class="" id="currentVideoTitle"> JOVEM RICOSO ...<br>Traplaudo, IG, Don Juan, Ryan SP, GP, Vine 7, Luuky e Nego Micha</h3>
+                
+                <div  style=" display: flex; align-items: center; height: 50px">
+                    <video id="myVideo" style="width: 100px; height: 50px;" autoplay muted aysinline  disablePictureInPicture controlslist="nodownload noremoteplayback nofullscreen">
+                    <source src="https://res.cloudinary.com/ddcizz79j/video/upload/v1734308865/higitfiavdtiasssdvastdahud_rp9k12.mp4" type="video/mp4">
+                    </video>
+                    <h3 class="h3" id="currentVideoTitle"> JOVEM RICOSO ...<br>Traplaudo, IG, Don Juan, Ryan SP, GP, Vine 7, Luuky e Nego Micha</h3>
                 </div>
             </div>
         </div>
@@ -45,6 +49,21 @@
         <p>Aqui vai o conteúdo do seu anúncio.</p>
     </div>
     <script src="archivo.js"></script>
+    <script>
+        const video = document.getElementById('myVideo');
+      
+        // Remove o menu de contexto (clique direito) do vídeo
+        video.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+        });
+      
+        // Adiciona o delay de 5 segundos após o término do vídeo
+        video.addEventListener('ended', () => {
+          setTimeout(() => {
+            video.play();
+          }, 5000); // 5000 milissegundos = 5 segundos
+        });
+      </script>
 
 </body>
 </html>
