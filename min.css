@@ -278,11 +278,8 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
-    .gostei h3 {
-        color: #ffffff;
-        width: 94%;
+    .h3 {
         font-size: 10px;
-        margin-left: 10px;
     }
     .anuncio {
     width: 90vw; /* Definindo a largura da div */
