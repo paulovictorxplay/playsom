@@ -336,12 +336,6 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
-    .gostei h3 {
-        color: #bee3a2;
-        width: 94%;
-        font-size: 20px;
-        margin-left: 10px;
-    }
     .anuncio {
         width: 90vw; /* Definindo a largura da div */
         height: 10vh; /* Definindo a altura da div */
@@ -405,13 +399,6 @@ body {
     display: flex;
     margin-left: 10px;
 }
-
-.gostei h3 {
-    color: #ffffff;
-    width: 100%;
-    size: 13;
-}
-
 .organizar {
     display: flex;
     flex-direction: column;
@@ -428,8 +415,14 @@ body {
     box-sizing: border-box; /* Incluindo borda e preenchimento na largura e altura */
     text-align: center;
 }
+    .h3 {
+    font-sise: 20px;
+    }
 
 }
+
+
+
 @media screen and (min-width: 1281px) and (min-height: 801px) {
     body {
         background-color: #000000;
@@ -500,7 +493,7 @@ body {
         text-align: center;
     }
     .h3 {
-        size: 20,
+        font-size: 20px,
         }
 }
 
