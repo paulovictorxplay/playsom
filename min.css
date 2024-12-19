@@ -298,7 +298,7 @@ a.avaliacao-link {
     .anuncio {
     width: 90vw; /* Definindo a largura da div */
     height: 10vh; /* Definindo a altura da div */
-    background-color: #a2a89d; /* Cor de fundo */
+    background-color: #fff; /* Cor de fundo */
     border: 1px solid #ccc; /* Borda */
     margin: 10px 0; /* Margem externa */
     padding: 20px; /* Preenchimento interno */
