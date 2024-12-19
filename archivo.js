@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setCurrentVideoIndex(this); // Set currentVideoIndex to the clicked song
     }
 
-
-
     // Function to set the current video index based on the clicked link
     function setCurrentVideoIndex(clickedLink) {
         playlistLinks.forEach(function(link, index) {
