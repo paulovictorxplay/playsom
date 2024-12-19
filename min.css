@@ -290,6 +290,13 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
+    .ps {
+        
+    }
+    .input {
+        width: 50%;
+    }
+    
     .h3 {
         color: #ffffff;
         width: 94%;
