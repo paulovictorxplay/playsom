@@ -222,7 +222,7 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
-    .gostei h3 {
+    .h3 {
         color: #ffffff;
         width: 94%;
         font-size: 10px;
@@ -237,9 +237,6 @@ a.avaliacao-link {
     padding: 20px; /* Preenchimento interno */
     box-sizing: border-box; /* Incluindo borda e preenchimento na largura e altura */
     text-align: center;
-}
-.h3 {
-    size: 14px;
 }
 }
 
