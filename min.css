@@ -152,6 +152,9 @@ a.avaliacao-link {
     text-overflow: ellipsis;
     width: 100%;
 }
+.ps {
+        display: flex;
+    }
 
 .playlist li a:hover {
     background-color: #1e1d1d;
@@ -291,7 +294,7 @@ a.avaliacao-link {
         margin-left: 10px;
     }
     .ps {
-        
+        display: flex;
     }
     .input {
         width: 50%;
