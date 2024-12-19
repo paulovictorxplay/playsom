@@ -222,7 +222,7 @@ a.avaliacao-link {
         flex-direction: column;
         margin-left: 10px;
     }
-    .h3 {
+    .gostei h3 {
         color: #ffffff;
         width: 94%;
         font-size: 10px;
@@ -237,6 +237,9 @@ a.avaliacao-link {
     padding: 20px; /* Preenchimento interno */
     box-sizing: border-box; /* Incluindo borda e preenchimento na largura e altura */
     text-align: center;
+}
+.h3 {
+    size: 14px;
 }
 }
 
@@ -257,10 +260,6 @@ a.avaliacao-link {
     .video-container video {
         width: 100%;
     }
-    .ps {
-         width: 100%;
-        flex-direction: row;
-    }
     .playlist {
         width: 90vw;
         max-height: 55vh;
@@ -273,7 +272,7 @@ a.avaliacao-link {
     }
     input {
         box-sizing: border-box; /* Garante que padding e bordas estejam incluídos no tamanho total */
-        width: 50%; /* Ou outro valor adequado */
+        width: 100%; /* Ou outro valor adequado */
     }
     
     input:focus {
