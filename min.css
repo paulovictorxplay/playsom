@@ -199,7 +199,6 @@ a.avaliacao-link {
 
 @media screen and (min-width: 360px) and (min-height: 667px) {
     body {
-         
         font-size: 8px;
         height: auto;
         width: 100vw;
@@ -251,7 +250,6 @@ a.avaliacao-link {
         border-radius: 5px;
         height: 20px;"
         font-size: 1px; /* Ajuste o tamanho do texto conforme necessário */
-        width: 100%; /* Garantir que o tamanho seja consistente */
         padding: 5px; /* Certifique-se de que o preenchimento seja fixo */
     font-size: 1px;
 
