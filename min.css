@@ -36,8 +36,14 @@
 }
 
     .video-container video {
-        width: 100%;
-    }
+    justify-content: center;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #000000a7;
+}
+
     .playlist {
         width: 90vw;
         max-height: 55vh;
