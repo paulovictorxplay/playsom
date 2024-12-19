@@ -268,6 +268,15 @@ a.avaliacao-link {
         scrollbar-width: thin;
         scrollbar-color: #000000 #1e1d1d;
     }
+    input {
+    box-sizing: border-box; /* Garante que padding e bordas estejam incluídos no tamanho total */
+    width: 100%; /* Ou outro valor adequado */
+}
+
+input:focus {
+    outline: none; /* Remove o destaque padrão */
+    border: 2px solid #000; /* Define um estilo de borda consistente */
+}
     .gostei {
         flex-direction: column;
         margin-left: 10px;
