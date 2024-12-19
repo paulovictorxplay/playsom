@@ -197,12 +197,17 @@ a.avaliacao-link {
 
 
 
-@media screen and (min-width: 344px) and (max-height: 667px) {
+@media screen and (min-width: 300px) and (max-height: 667px) {
     body {
         font-size: 8px;
         height: auto;
         width: 100vw;
     }
+    .navbar {
+    display: none;
+    height: 0;
+}
+
     .video-playlist-container {
         flex-direction: column;
         width: 100%;
