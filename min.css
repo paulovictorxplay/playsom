@@ -181,7 +181,8 @@ a.avaliacao-link {
     margin: 0;
 }
 
-input:focus {
+
+.input:focus {
         outline: none;
         border: 2px solid #000; /* Define um estilo para o foco */
     }
