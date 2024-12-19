@@ -258,7 +258,6 @@ a.avaliacao-link {
     }
 
     .input:focus {
-        outline: none;
         border: 2px solid #000; /* Define um estilo para o foco */
     }
 
@@ -336,7 +335,6 @@ a.avaliacao-link {
     }
 
     .input:focus {
-        outline: none;
         border: 2px solid #000; /* Define um estilo para o foco */
     }
 }
