@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
         playVideo(videoUrl, videoTitle);
         setCurrentVideoIndex(this); // Set currentVideoIndex to the clicked song
     }
+    const input = document.querySelector('.input');
+const videoContainer = document.querySelector('.video-container');
+
+// Ajusta o layout quando o input recebe foco
+input.addEventListener('focus', () => {
+    videoContainer.style.position = 'fixed';
+    videoContainer.style.top = '0';
+    videoContainer.style.width = '100%';
+    videoContainer.style.zIndex = '1000'; // Garante que o vídeo fique visível
+});
+
+// Restaura o layout ao perder o foco
+input.addEventListener('blur', () => {
+    videoContainer.style.position = 'relative';
+    videoContainer.style.zIndex = 'auto';
+});
+
 
     // Function to set the current video index based on the clicked link
     function setCurrentVideoIndex(clickedLink) {
