@@ -244,7 +244,7 @@ a.avaliacao-link {
 
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
     body {
         font-size: 8px;
         height: auto;
