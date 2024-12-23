@@ -22,7 +22,12 @@
                     <video id="myVideo" style="width: 100px; height: 50px;" autoplay muted aysinline  disablePictureInPicture controlslist="nodownload noremoteplayback nofullscreen">
                     <source src="https://res.cloudinary.com/ddcizz79j/video/upload/v1734308865/higitfiavdtiasssdvastdahud_rp9k12.mp4" type="video/mp4">
                     </video>
-                    <h3 class="h3" id="currentVideoTitle"> JOVEM RICOSO ...<br>Traplaudo, IG, Don Juan, Ryan SP, GP, Vine 7, Luuky e Nego Micha</h3>
+                   <div style="display: flex;flex-direction: column;">
+                        <h3 class="h3" id="currentVideoTitle"> JOVEM RICOSO ...Traplaudo, IG, Don Juan, Ryan SP, GP, Vine 7, Luuky e Nego Micha</h3>
+                       <div style="display: flex;flex-direction: row;">
+                        <h3 class="h3" id="currentVideoTitl">Views: 0</h3>
+                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -44,10 +49,7 @@
         </div>
         
     </div>
-    <div class="anuncio">
-        <h2>Anúncio</h2>
-        <p>Aqui vai o conteúdo do seu anúncio.</p>
-    </div>
+   
     <script src="archivo.js"></script>
     <script>
         const video = document.getElementById('myVideo');
@@ -64,6 +66,36 @@
           }, 5000); // 5000 milissegundos = 5 segundos
         });
       </script>
+    <script>
+    const videoPlayer = document.getElementById('videoPlayer');
+    const viewsElement = document.getElementById('currentVideoTitl');
+    const deviceId = localStorage.getItem('deviceId') || crypto.randomUUID();
+    localStorage.setItem('deviceId', deviceId);
+
+    const updateViews = async (videoId) => {
+        try {
+            // Atualiza o contador de visualizações no servidor
+            await fetch('http://localhost:3000/view', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ videoId, deviceId })
+            });
+
+            // Recupera o número atualizado de visualizações
+            const response = await fetch(`http://localhost:3000/views/${videoId}`);
+            const data = await response.json();
+            viewsElement.textContent = `Views: ${data.views}`;
+        } catch (error) {
+            console.error('Erro ao atualizar visualizações:', error);
+        }
+    };
+
+    // Dispara quando o vídeo começar a ser reproduzido
+    videoPlayer.addEventListener('play', () => {
+        const videoId = videoPlayer.currentSrc; // Use a URL como identificador do vídeo
+        updateViews(videoId);
+    });
+</script>
 
 </body>
 </html>
