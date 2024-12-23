@@ -67,6 +67,34 @@
         });
       </script>
     <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+const viewsElement = document.getElementById('currentVideoTitl');
+const deviceId = localStorage.getItem('deviceId') || crypto.randomUUID();
+localStorage.setItem('deviceId', deviceId);
+
+const updateViews = async (videoId) => {
+    try {
+        // Envia a visualização ao backend
+        await fetch('http://localhost:3000/view', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ videoId, deviceId })
+        });
+
+        // Busca o número atualizado de visualizações
+        const response = await fetch(`http://localhost:3000/views/${encodeURIComponent(videoId)}`);
+        const data = await response.json();
+        viewsElement.textContent = `Views: ${data.views}`;
+    } catch (error) {
+        console.error('Erro ao atualizar visualizações:', error);
+    }
+};
+
+// Detecta quando o vídeo começa a tocar
+videoPlayer.addEventListener('play', () => {
+    const videoId = videoPlayer.currentSrc; // URL do vídeo como identificador único
+    updateViews(videoId);
+});
     // Lista global para armazenar as visualizações
 const videoViews = {}; // Armazena visualizações por videoId
 const videoDevices = {}; // Armazena dispositivos por videoId
