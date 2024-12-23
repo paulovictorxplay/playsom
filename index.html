@@ -67,34 +67,36 @@
         });
       </script>
     <script>
-    const videoPlayer = document.getElementById('videoPlayer');
-    const viewsElement = document.getElementById('currentVideoTitl');
+    // Lista global para armazenar as visualizações
+const videoViews = {}; // Armazena visualizações por videoId
+const videoDevices = {}; // Armazena dispositivos por videoId
+
+// Função para atualizar visualizações
+function updateViews(videoId) {
     const deviceId = localStorage.getItem('deviceId') || crypto.randomUUID();
     localStorage.setItem('deviceId', deviceId);
 
-    const updateViews = async (videoId) => {
-        try {
-            // Atualiza o contador de visualizações no servidor
-            await fetch('http://localhost:3000/view', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ videoId, deviceId })
-            });
+    // Se o vídeo ainda não foi visto
+    if (!videoDevices[videoId]) {
+        videoDevices[videoId] = new Set();
+    }
 
-            // Recupera o número atualizado de visualizações
-            const response = await fetch(`http://localhost:3000/views/${videoId}`);
-            const data = await response.json();
-            viewsElement.textContent = `Views: ${data.views}`;
-        } catch (error) {
-            console.error('Erro ao atualizar visualizações:', error);
-        }
-    };
+    // Se o dispositivo ainda não visualizou, adiciona
+    if (!videoDevices[videoId].has(deviceId)) {
+        videoDevices[videoId].add(deviceId);
+        // Atualiza a quantidade de visualizações
+        videoViews[videoId] = videoDevices[videoId].size;
+    }
 
-    // Dispara quando o vídeo começar a ser reproduzido
-    videoPlayer.addEventListener('play', () => {
-        const videoId = videoPlayer.currentSrc; // Use a URL como identificador do vídeo
-        updateViews(videoId);
-    });
+    // Atualiza a contagem de visualizações no frontend
+    document.getElementById('currentVideoTitl').textContent = `Views: ${videoViews[videoId] || 0}`;
+}
+
+// Detecta quando o vídeo começa a tocar e chama a função para atualizar visualizações
+document.getElementById('videoPlayer').addEventListener('play', () => {
+    const videoId = 'JovemRicoso'; // Substitua por um identificador único para o vídeo
+    updateViews(videoId);
+});
 </script>
 
 </body>
