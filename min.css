@@ -277,62 +277,6 @@ a.avaliacao-link {
 
 
 
-/* Estilos para telas com largura mínima de 412px e altura mínima de 915px */
-@media screen and (min-width: 500px) and (min-height: 1023px) {
-    /* Insira seus estilos aqui */
-    body {
-        font-size: 8px;
-        height: auto;
-        width: 100vw;
-    }
-    .video-playlist-container {
-        flex-direction: column;
-        width: 100%;
-    }
-    .video-container video {
-        width: 100%;
-    }
-    .playlist {
-        width: 90vw;
-        max-height: 45vh;
-    }
-    .playlist-items.y {
-        background-color: var(--yt-spec-general-background-a);
-        height: 100%;
-        padding: 0 0 4px 0;
-        overflow-y: auto;
-    }
-    .moverlist {
-        overflow-y: auto;
-        outline-color: #000000;
-        height: 40vh;
-        scrollbar-width: thin;
-        scrollbar-color: #000000 #1e1d1d;
-    }
-    .gostei {
-        flex-direction: column;
-        margin-left: 10px;
-    }
-    .gostei h3 {
-        color: #bee3a2;
-        width: 94%;
-        font-size: 20px;
-        margin-left: 10px;
-    }
-    .anuncio {
-        width: 90vw; /* Definindo a largura da div */
-        height: 10vh; /* Definindo a altura da div */
-        background-color: #ffffff; /* Cor de fundo */
-        border: 1px solid #ccc; /* Borda */
-        margin: 10px 0; /* Margem externa */
-        padding: 20px; /* Preenchimento interno */
-        box-sizing: border-box; /* Incluindo borda e preenchimento na largura e altura */
-        text-align: center;
-    }
-}
-
-
-
 @media screen and (min-width: 1020px) and (min-height: 599px) {
 body {
     background-color: #000000;
