@@ -285,6 +285,7 @@ a.avaliacao-link {
     }
     .gostei {
         flex-direction: column;
+        height: 80px;
         margin-left: 10px;
     }
     .ps {
