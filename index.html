@@ -72,9 +72,10 @@ const viewsElement = document.getElementById('currentVideoTitl');
 const deviceId = localStorage.getItem('deviceId') || crypto.randomUUID();
 localStorage.setItem('deviceId', deviceId);
 
+// Função para atualizar as visualizações no servidor
 const updateViews = async (videoId) => {
     try {
-        // Envia a visualização ao backend
+        // Envia a visualização ao backend (para atualizar a base de dados)
         await fetch('http://localhost:3000/view', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -90,39 +91,9 @@ const updateViews = async (videoId) => {
     }
 };
 
-// Detecta quando o vídeo começa a tocar
-videoPlayer.addEventListener('play', () => {
-    const videoId = videoPlayer.currentSrc; // URL do vídeo como identificador único
-    updateViews(videoId);
-});
-    // Lista global para armazenar as visualizações
-const videoViews = {}; // Armazena visualizações por videoId
-const videoDevices = {}; // Armazena dispositivos por videoId
-
-// Função para atualizar visualizações
-function updateViews(videoId) {
-    const deviceId = localStorage.getItem('deviceId') || crypto.randomUUID();
-    localStorage.setItem('deviceId', deviceId);
-
-    // Se o vídeo ainda não foi visto
-    if (!videoDevices[videoId]) {
-        videoDevices[videoId] = new Set();
-    }
-
-    // Se o dispositivo ainda não visualizou, adiciona
-    if (!videoDevices[videoId].has(deviceId)) {
-        videoDevices[videoId].add(deviceId);
-        // Atualiza a quantidade de visualizações
-        videoViews[videoId] = videoDevices[videoId].size;
-    }
-
-    // Atualiza a contagem de visualizações no frontend
-    document.getElementById('currentVideoTitl').textContent = `Views: ${videoViews[videoId] || 0}`;
-}
-
 // Detecta quando o vídeo começa a tocar e chama a função para atualizar visualizações
-document.getElementById('videoPlayer').addEventListener('play', () => {
-    const videoId = 'JovemRicoso'; // Substitua por um identificador único para o vídeo
+videoPlayer.addEventListener('play', () => {
+    const videoId = videoPlayer.currentSrc; // Usando a URL do vídeo como identificador único
     updateViews(videoId);
 });
 </script>
