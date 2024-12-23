@@ -196,7 +196,6 @@ a.avaliacao-link {
 
 @media screen and (max-width: 800px) {
     body {
-        font-size: 8px;
         height: auto;
         width: 100vw;
     }
@@ -248,7 +247,7 @@ a.avaliacao-link {
     .h3 {
         color: #ffffff;
         width: 94%;
-        font-size: 10px;
+        size: 10px;
         margin-left: 10px;
     }
     .anuncio {
